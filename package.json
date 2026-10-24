@@ -1,0 +1,10 @@
+{
+  "name": "cppify-tinybasic-compiler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cppify browser IDE powered by a custom C++ TinyBasic compiler compiled to WebAssembly.",
+  "scripts": {
+    "build:wasm": "bash ./build-wasm.sh",
+    "serve": "python3 -m http.server 8000"
+  }
+}

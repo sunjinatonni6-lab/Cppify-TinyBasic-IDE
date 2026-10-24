@@ -1,0 +1,6 @@
+let a = 42;
+let b = 8;
+print a + b;
+print a - b;
+print a * b;
+print a / b;

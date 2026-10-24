@@ -1,0 +1,38 @@
+/* Custom scrollbars and Cppify-specific styles */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #10b981; }
+
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(16,185,129,0.03) 50%,
+    rgba(16,185,129,0.03)
+  );
+  background-size: 100% 4px;
+}
+
+.stage-tab {
+  border-bottom: 2px solid transparent;
+  color: #94a3b8;
+}
+.stage-tab:hover { color: #e2e8f0; }
+.stage-tab.active {
+  border-bottom-color: #34d399;
+  color: #34d399;
+  background: rgba(30,41,59,0.5);
+}
+#source-editor { min-width: 0; }
+#cpu-terminal-out, #wasm-hex-matrix, #token-json-out { overflow-wrap: anywhere; }
+#cppify-toast { max-width: calc(100vw - 2rem); }
+@media (max-width: 640px) {
+  body { overflow: auto; }
+  header { height: auto !important; min-height: 3.5rem; flex-wrap: wrap; gap: .75rem; padding-top: .75rem; padding-bottom: .75rem; }
+  header > div:last-child { flex-wrap: wrap; }
+  .scanline { min-height: 30rem; }
+  #panel-cpu > div > div:first-child { flex-wrap: wrap; gap: .5rem; }
+  footer { min-height: 2rem; height: auto !important; gap: .5rem; flex-wrap: wrap; padding-top: .5rem; padding-bottom: .5rem; }
+}
